@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ellada Prime</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<section class="hero">
+  <img src="img/hero/cloud1.png" alt="cloud 1" class="cloud cloud1">
+  <img src="img/hero/cloud2.png" alt="cloud 2" class="cloud cloud2">
+  <img src="img/hero/panorama1.png" alt="panorama 1" class="panorama panorama1">
+  <img src="img/hero/building1.png" alt="building 1" class="building building1">
+  <img src="img/hero/building2.png" alt="building 2" class="building building2">
+  <header class="header">
+    <div class="container header-container">
+      <img src="img/hero/menu.svg" alt="menu" class="header-menu">
+      <img src="img/hero/logo.svg" alt="logo" class="header-logo">
+      <span class="header-text1">агенство премиум-<br>недвижемости в Дубае</span>
+      <div class="header-info">
+        <div class="header-phone">
+          <img src="img/hero/phone.svg" alt="phone">
+          <span class="header-text2">+911 839 <span class="header-text2-bold">994 32 22</span></span>
+        </div>
+        <span class="header-text3">Работаем круглосуточно</span>
+      </div>
+    </div>
+  </header>
+<div class="hero-content">
+  <div class="hero-image1">
+    <img src="img/hero/aunt.png" alt="aunt" class="content-aunt">
+  </div>
+  <div class="content-container">
+    <span class="content-text1">Поможем<br>инвестировать<br>в недвижимость</span>
+    <div class="hero-content-subtext">
+      <img src="img/hero/journal.png" alt="journal" class="content-journal">
+      <span class="content-text2">Формируем персональную подборку<br>
+        объектов в рамках вашего бюджета<br>
+        с расчетом доходности и рисков</span>
+    </div>
+    <button class="hero-button" id="openPopup">Оставить заявку</button>
+    <div class="content-badge">
+      <span class="content-badge-text">в Дубае</span>
+    </div>
+  </div>
+  <div class="hero-circle">
+    <div class="hero-circle-inner">
+      <img src="img/hero/logo2.svg" alt="logo2" class="hero-circle-logo">
+      <span class="hero-circle-text1">Эллада<br>Альбицкая</span>
+      <span class="hero-circle-text2">Брокер по<br>недвижимости</span>
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="popup-overlay" id="popup">
+  <div class="popup-window">
+    <div class="popup-left">
+      <h2 class="popup-title">Заполните короткую форму</h2>
+      <p class="popup-subtitle">и получите бесплатную консультацию<br>от нашего риелтора</p>
+      <div class="popup-inputs">
+        <div class="input-field">
+          <img src="img/hero/user.svg" class="input-icon">
+          <input type="text" id="nameInput" placeholder="Ваше имя">
+        </div>
+        <div class="input-field">
+          <img src="img/hero/phone2.svg" class="input-icon">
+          <input type="tel" id="phoneInput" placeholder="Ваш номер телефона">
+        </div>
+      </div>
+      <button class="popup-button" id="submitButton" disabled>Оставить заявку</button>
+      <p class="popup-policy">
+        Нажимая кнопку, вы соглашаетесь с условиями<br>
+        <a href="privacy.html" target="_blank">
+          политики конфиденциальности
+        </a>
+      </p>
+    </div>
+    <div class="popup-right">
+      <img src="img/hero/aunt-popup.png" class="popup-aunt">
+      <div class="popup-badge">
+        <div class="popup-badge-inner">
+          <img src="img/hero/logo2.svg" alt="logo2" class="popup-badge-logo">
+          <span class="popup-badge-text1">Эллада<br>Альбицкая</span>
+          <span class="popup-badge-text2">Брокер по<br>недвижимости</span>
+        </div>
+      </div>
+    </div>
+    <button class="popup-close" id="popupClose">✕</button>
+  </div>
+</div> 
+<section class="transition">
+  <img src="img/hero/transition.svg" alt="transition12" class="transition12">
+</section>
+<div class="hero-cards">
+  <div class="hero-card">
+    <span class="card-title">Дистанционное<br>
+заключение договора </span>
+    <span class="card-subtitle">
+      Вам не нужно приезжать, сделку<br>
+можно провести онлайн 
+    </span>
+    <span class="card-number">01</span>
+  </div>
+  <div class="hero-card">
+    <span class="card-title">Беспроцентная<br>
+рассрочка</span>
+    <span class="card-subtitle">
+      Рассрочка от застрйщика как до<br>
+получения ключей, так и после
+    </span>
+    <span class="card-number">02</span>
+  </div>
+  <div class="hero-card">
+    <span class="card-title">ВНЖ или Золотая<br>
+виза в Дубае</span>
+    <span class="card-subtitle">
+      Возможно получить в течение<br>
+двух недель после регистрации<br>
+договора купли-продажи 
+    </span>
+    <span class="card-number">03</span>
+  </div>
+</div>
+<section class="objects">
+  <div class="objects-header">
+    <h2 class="objects-title">Список объектов</h2>
+    <div class="objects-hint">
+      Крутите колесиком мышки, чтобы<br>
+      ознакомиться со всеми объектами
+    </div>
+  </div>
+  <div class="objects-slider" id="objectsSlider"></div>
+</section>
+<section class="catalog">
+  <img src="img/catalog/tower.png" class="catalog-bg-img">
+  <div class="container catalog-container">
+    <div class="catalog-left">
+      <h2 class="catalog-title">
+        Скачайте<br>полный каталог
+      </h2>
+      <div class="catalog-tags">
+        <div class="catalog-tag">Dubai Land</div>
+        <div class="catalog-tag">Downtown</div>
+        <div class="catalog-tag">Dubai Islands</div>
+      </div>
+      <div class="catalog-subtitle">
+        Каталог актуальных инвестиционных проектов<br>
+с возможностью рассрочки до и после<br>
+получения ключей
+      </div>
+      <a href="catalog.pdf" 
+        target="blank"
+        class="catalog-button">
+        Скачать каталог
+      </a>
+    </div>
+    <img src="img/catalog/click.svg" class="catalog-decor">
+  </div>
+  <div class="catalog-content">
+    <div class="mockup">
+      <img src="img/catalog/mockup.png" alt="mockup" class="catalog-mockup">
+    </div>
+    <div class="catalog-circle">
+    <div class="catalog-circle-inner">
+      <span class="catalog-circle-text1">размер</span>
+      <span class="catalog-circle-text2">2.5 МБ</span>
+      <img src="img/catalog/cloud.svg" alt="logo2" class="catalog-circle-logo">
+    </div>
+    </div>
+  </div>
+</section>
+<section class="advantages">
+  <div class="advantages-container">
+    <h2 class="advantages-title">
+      Преимущества инвестиций в Дубай
+    </h2>
+    <div class="advantages-grid">
+      <div class="adv-card adv-card-large">
+        <img src="img/advantages/calc.png"
+             class="adv-image">
+        <div class="adv-content">
+          <div class="adv-title">
+            Высокая доходность
+          </div>
+          <div class="adv-subtitle">
+            Недвижимость в Дубае показывает
+            стабильный рост стоимости
+            и высокий ROI
+          </div>
+        </div>
+      </div>
+      <div class="adv-card adv-card-small">
+        <div class="adv-images">
+          <img src="img/advantages/icon1.png">
+          <img src="img/advantages/icon2.png">
+          <img src="img/advantages/icon3.png">
+        </div>
+        <div class="adv-title small">
+          Без налога на доход
+        </div>
+      </div>
+      <div class="adv-card adv-card-small">
+        <img src="img/advantages/icon4.png"
+             class="adv-image-small">
+        <div class="adv-title small2">
+          Низкий порог входа
+        </div>
+        <div class="adv-subtitle">
+          Первоначальный взнос 10-20% от<br>
+стоимости в зависимости от проекта
+        </div>
+      </div>
+      <div class="adv-card adv-card-wide">
+        <div class="adv-wide-content">
+          <div>
+            <div class="adv-title">
+              Лояльный визовый режим
+            </div>
+            <div class="adv-subtitle">
+              Упрощенный въезд и возможность получения<br>
+резидентской визы при покупке недвижимости
+            </div>
+          </div>
+          <img src="img/advantages/visa.png"
+               class="adv-wide-image">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="investment">
+  <img src="img/investment/bg.png" alt="" class="investment-bg">
+  <div class="investment-container">
+    <h2 class="investment-title">
+      Покупка апартаментов<br>в Дубае — лучший способ<br>вложения денег
+    </h2>
+    <div class="investment-info">
+      <img src="img/investment/icon.svg" alt="" class="investment-icon">
+      <div class="investment-subtitle">
+        За последний год цены <br>
+        на апартаменты выросли в 1,5 раза
+      </div>
+    </div>
+    <a href="catalog.pdf" download class="investment-button">
+      Получить каталог объектов
+    </a>
+  </div>
+  <div class="investment-stat">
+  <div class="investment-stat-inner">
+    <div class="investment-percent">
+      <span class="investment-number">87</span>
+      <span class="investment-sign">%</span>
+    </div>
+    <div class="investment-stat-text">
+      Наших клиентов отметили<br>
+      рост стоимости и доходности<br>
+      своих объектов
+    </div>
+  </div>
+</div>
+</section>
+<section class="contact-form-section">
+  <img src="img/form/rect.png" class="form-rect form-rect1" alt="" >
+  <img src="img/form/building1.png" class="form-building form-building1" alt="">
+  <img src="img/form/palm1.png" class="form-palm form-palm1" alt="">
+  <img src="img/form/building2.png" class="form-building form-building2" alt="">
+  <img src="img/form/palm2.png" class="form-palm form-palm2" alt="">
+  <img src="img/form/panorama.png" class="form-panorama" alt="">
+
+  <div class="contact-form">
+  <h2 class="contact-form-title">
+    Заполните короткую форму
+  </h2>
+  <p class="contact-form-subtitle">
+    и получите бесплатную консультацию<br>
+    от нашего риелтора
+  </p>
+  <div class="contact-form-inputs">
+    <div class="contact-input">
+      <img src="img/hero/user.svg" alt="" class="contact-input-icon">
+      <input
+        type="text"
+        placeholder="Ваше имя"
+        id="contactName"
+      >
+    </div>
+    <div class="contact-input">
+      <img src="img/hero/phone2.svg" alt="" class="contact-input-icon">
+      <input
+        type="tel"
+        placeholder="Ваш номер телефона"
+        id="contactPhone"
+      >
+    </div>
+  </div>
+  <button class="contact-form-button">
+    Оставить заявку
+  </button>
+  <p class="contact-form-policy">
+    Нажимая кнопку, вы соглашаетесь с условиями<br>
+    <a href="privacy.html" target="_blank">
+      политики конфиденциальности
+    </a>
+  </p>
+
+</div>
+
+
+</section>
+
+<script src="js/main.js"></script>
+</body>
+</html>
