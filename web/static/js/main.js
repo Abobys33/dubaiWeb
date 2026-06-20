@@ -145,3 +145,70 @@ document.addEventListener("DOMContentLoaded", () => {
   `).join('');
 
 });
+
+const API_URL = "/api/feedback";
+
+async function submitFeedback(name, phone, button) {
+  const originalText = button.textContent;
+  button.disabled = true;
+  button.textContent = "Отправляем...";
+
+  try {
+    const res = await fetch(API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, phone }),
+    });
+
+    const data = await res.json();
+
+    if (!res.ok || !data.success) {
+      throw new Error(data.error || "Не удалось отправить заявку");
+    }
+
+    button.textContent = "Заявка отправлена!";
+  } catch (err) {
+    console.error(err);
+    button.textContent = "Ошибка, попробуйте снова";
+    button.disabled = false;
+  } finally {
+    setTimeout(() => {
+      button.textContent = originalText;
+      button.disabled = false;
+    }, 3000);
+  }
+}
+
+// Попап
+submitButton.addEventListener("click", () => {
+  submitFeedback(nameInput.value.trim(), phoneInput.value.trim(), submitButton);
+});
+
+// Форма внизу страницы
+const contactName = document.getElementById("contactName");
+const contactPhone = document.getElementById("contactPhone");
+const contactButton = document.querySelector(".contact-form-button");
+
+contactPhone.addEventListener("input", maskPhone);
+contactPhone.addEventListener("focus", () => {
+  if (!contactPhone.value) {
+    contactPhone.value = "+7 (";
+  }
+});
+
+function validateContactForm() {
+  const nameValid = contactName.value.trim().length >= 2;
+  const phoneValid = contactPhone.value.length === 18;
+  contactButton.disabled = !(nameValid && phoneValid);
+}
+
+contactName.addEventListener("input", () => {
+  contactName.value = contactName.value.replace(/[0-9]/g, "");
+  validateContactForm();
+});
+contactPhone.addEventListener("input", validateContactForm);
+
+contactButton.disabled = true;
+contactButton.addEventListener("click", () => {
+  submitFeedback(contactName.value.trim(), contactPhone.value.trim(), contactButton);
+});

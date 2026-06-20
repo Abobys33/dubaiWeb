@@ -1,0 +1,22 @@
+env: "local"
+
+database:
+  host: "db"
+  port: 5432
+  user: "dubai-user"
+  password: "3356"
+  dbname: "dubai_db"
+  sslmode: "disable"
+
+http_server:
+  address: "0.0.0.0:8080"
+  timeout: 4s
+  idle_timeout: 60s
+
+smtp:
+  host: "smtp.mail.ru"
+  port: 587
+  user: "veylin2175@mail.ru"
+  password: "nP5s8cS9OccYYNEcKqmc"
+  from: "veylin2175@mail.ru"
+  to: "tabbymatvey@gmail.com"
