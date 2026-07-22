@@ -94,29 +94,48 @@ document.addEventListener("DOMContentLoaded", () => {
       subtitle: "Это комплекс в самом сердце растущего жилого<br>массива Дубая в 10 минутах от Дубай Аутлет Молл ",
       price: "от 804 000 AED",
       roi: "Q2 2027",
-      image: "img/objects/obj1.png"
+      image: "img/objects/obj1.png",
+      pdf: "info/obj1.pdf"
     },
     {
       title: "Binghatti Vintage",
       subtitle: "Это футуристический жилой комплекс в районе Маджан<br>с бассейном, спа и открытым кинотеатром",
       price: "от 670 000 AED",
       roi: "ACTIVE",
-      image: "img/objects/obj2.png"
+      image: "img/objects/obj2.png",
+      pdf: "info/obj2.pdf"
     },
-     {
+    {
       title: "LuzOra Residences",
       subtitle: "Премиум-комплекс с бассейном и<br>залом в районе Дейра в Дубае",
       price: "от 1 590 000 AED",
       roi: "Q2 2027",
-      image: "img/objects/obj3.png"
+      image: "img/objects/obj3.png",
+      pdf: "info/obj3.pdf"
     },
-
     {
       title: "Celesto 2 Tower",
-      subtitle: "Это 18-этажный жилой комплекс, расположенный<br >в районе Dubai Land Residence Complex",
+      subtitle: "Это 18-этажный жилой комплекс, расположенный<br>в районе Dubai Land Residence Complex",
       price: "от 1 032 350 AED",
       roi: "Q2 2028",
-      image: "img/objects/obj4.png"
+      image: "img/objects/obj4.png",
+      pdf: "info/obj4.pdf"
+    },
+    {
+      title: "Enso Amber",
+      subtitle: "Комплекс находится в 10–15 минутах езды от<br>Даунтаун Дубай с его знаковыми Бурж Халифа",
+      price: "от 1 532 628 AED",
+      roi: "Q4 2026",
+      image: "img/objects/obj5.png",
+      pdf: "info/obj5.pdf"
+    },
+    {
+      title: "Marina Shores",
+      subtitle: "Фасад придаёт зданию футуристичный вид.<br>В квартирах панорамные окна с видом на море и пристань",
+      price: "от 1 820 000 AED",
+      roi: "Q4 2026",
+      image: "img/objects/obj6.png",
+      pdf: "info/obj6.pdf"
     },
   ];
 
@@ -136,10 +155,10 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="object-subtitle">${item.subtitle}</div>
         </div>
 
-        <div class="object-link">
+        <a href="${item.pdf}" target="_blank" class="object-link">
           Узнать подробнее
           <img src="img/objects/arrow.svg">
-        </div>
+        </a>
       </div>
     </div>
   `).join('');

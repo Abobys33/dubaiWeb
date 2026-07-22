@@ -31,7 +31,7 @@ func main() {
 
 	log := setupLogger(cfg.Env)
 
-	log.Info("Starting event booker", slog.String("env", cfg.Env))
+	log.Info("Starting dubai web app", slog.String("env", cfg.Env))
 	log.Debug("Debug messages are enabled")
 
 	storage, err := postgres.InitDB(&cfg.Database)
