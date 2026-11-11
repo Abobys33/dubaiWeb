@@ -8,8 +8,6 @@ services:
       POSTGRES_USER: dubai-user
       POSTGRES_PASSWORD: 3356
       POSTGRES_DB: dubai_db
-    ports:
-      - "5432:5432"
     volumes:
       - db-data:/var/lib/postgresql/data
     healthcheck:
@@ -21,8 +19,6 @@ services:
   app:
     build: .
     restart: always
-    ports:
-      - "8080:8080"
     depends_on:
       db:
         condition: service_healthy
