@@ -1,3 +1,3 @@
-ellada-prime.ru {
+ellada-prime.ru, www.ellada-prime.ru {
     reverse_proxy app:8080
-}
+}s
